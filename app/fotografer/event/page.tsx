@@ -197,14 +197,20 @@ export default function EventGalleryPage() {
 
           {/* Image container */}
           <motion.div 
-            className="relative max-h-[90vh] max-w-5xl"
+            className="relative max-h-[90vh] max-w-5xl cursor-grab active:cursor-grabbing"
             onClick={(e) => e.stopPropagation()}
             drag="x"
-            dragElastic={0.2}
-            dragConstraints={{ left: -100, right: 100 }}
+            dragElastic={0.3}
+            dragMomentum={true}
+            dragConstraints={{ left: -150, right: 150 }}
             onDragEnd={(e, info) => handleDragEnd(info)}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <div className="relative h-[80vh] w-[90vw] max-w-5xl">
+            <motion.div 
+              className="relative h-[80vh] w-[90vw] max-w-5xl"
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0.8 }}
+            >
               <Image
                 src={events[selectedImage].image}
                 alt={events[selectedImage].alt}
@@ -213,10 +219,15 @@ export default function EventGalleryPage() {
                 className="object-contain"
                 priority
               />
-            </div>
+            </motion.div>
             
             {/* Image info */}
-            <div className="mt-4 rounded-2xl bg-white/10 backdrop-blur p-4">
+            <motion.div 
+              className="mt-4 rounded-2xl bg-white/10 backdrop-blur p-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.1em] text-white/60 mb-1">
@@ -230,7 +241,7 @@ export default function EventGalleryPage() {
                   {selectedImage + 1} / {events.length}
                 </span>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       )}
