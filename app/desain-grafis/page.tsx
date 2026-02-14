@@ -33,7 +33,7 @@ const graphicWorks = [
     accent: "from-[#00c6ae] to-[#06b6d4]",
     icon: "mdi:package-variant-closed",
     image:
-      "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=900&q=80",
+      "https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Kemasan produk dengan detail premium",
     tag: "Packaging",
     deliverables: ["Package Design", "Label Design", "Mockups"],
