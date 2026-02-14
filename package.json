@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync": "bash scripts/auto-commit.sh",
+    "sync:watch": "nodemon --watch app --watch public --exec 'npm run sync'"
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
