@@ -117,7 +117,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-center text-xs text-[#4a3a6a] sm:text-left">
+          <p className="text-center text-xs text-[#4a3a6a] sm:text-left" suppressHydrationWarning>
             © {currentYear} Minvect. All rights reserved.
           </p>
           <div className="flex gap-4 text-xs text-[#4a3a6a]">
