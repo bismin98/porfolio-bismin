@@ -3,51 +3,7 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    name: "Neon Studio Dashboard",
-    role: "UI/UX + Frontend",
-    desc: "Dashboard analytics dengan animasi halus, grafik realtime, dan sistem design modular.",
-    accent: "from-[#0ea5e9] via-[#6b7bff] to-[#00c6ae]",
-    icon: "mdi:view-dashboard-outline",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
-    alt: "Dashboard analytics di laptop",
-    badge: "Frontend",
-    badgeColor: "bg-gradient-to-r from-[#0ea5e9] to-[#6b7bff]",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    accentLight: "rgba(14, 165, 233, 0.2)",
-  },
-  {
-    name: "Aurora Booking",
-    role: "Fullstack",
-    desc: "Sistem booking dengan pengalaman mobile-first, integrasi kalender, dan notifikasi.",
-    accent: "from-[#10b981] via-[#00c6ae] to-[#06b6d4]",
-    icon: "mdi:calendar-check",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
-    alt: "Tim berdiskusi di depan layar",
-    badge: "Fullstack",
-    badgeColor: "bg-gradient-to-r from-[#10b981] to-[#00c6ae]",
-    technologies: ["Node.js", "PostgreSQL", "Next.js"],
-    accentLight: "rgba(16, 185, 129, 0.2)",
-  },
-  {
-    name: "Citrus Commerce",
-    role: "Frontend",
-    desc: "Landing page e-commerce dengan visual editorial, katalog produk, dan CTA jelas.",
-    accent: "from-[#f43f5e] via-[#ff5e7d] to-[#fbbf24]",
-    icon: "mdi:shopping-outline",
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
-    alt: "Produk jam tangan untuk e-commerce",
-    badge: "Commerce",
-    badgeColor: "bg-gradient-to-r from-[#f43f5e] to-[#ff5e7d]",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    accentLight: "rgba(244, 63, 94, 0.2)",
-  },
-];
+import { itProjects } from "../data/itProjects";
 
 export default function ItProjectPage() {
   return (
@@ -137,7 +93,7 @@ export default function ItProjectPage() {
         transition={{ duration: 0.5 }}
         className="grid gap-6 md:grid-cols-3"
       >
-        {projects.map((project, index) => (
+        {itProjects.map((project, index) => (
           <motion.article 
             key={project.name} 
             initial={{ opacity: 0, y: 30 }}

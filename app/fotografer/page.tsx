@@ -4,42 +4,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const photoSets = [
-  {
-    title: "Portrait Editorial",
-    desc: "Tone sinematik, pencahayaan kontras, dan ekspresi kuat.",
-    icon: "mdi:account-eye",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
-    alt: "Portrait dengan pencahayaan dramatis",
-    accent: "from-[#ff5e7d] to-[#ffc857]",
-    tag: "Portrait",
-    link: "/fotografer/portrait",
-  },
-  {
-    title: "Brand Lifestyle",
-    desc: "Visual bercerita untuk kampanye dan katalog digital.",
-    icon: "mdi:bag-personal",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-    alt: "Gaya hidup outdoor dan produk",
-    accent: "from-[#6b7bff] to-[#00c6ae]",
-    tag: "Lifestyle",
-    link: "/fotografer/lifestyle",
-  },
-  {
-    title: "Event & Stage",
-    desc: "Moment, energi, dan dokumentasi yang tetap elegan.",
-    icon: "mdi:party-popper",
-    image:
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80",
-    alt: "Panggung konser dengan pencahayaan",
-    accent: "from-[#fbbf24] to-[#f97316]",
-    tag: "Event",
-    link: "/fotografer/event",
-  },
-];
+import { photoSets } from "../data/photoSets";
 
 export default function FotograferPage() {
   return (
